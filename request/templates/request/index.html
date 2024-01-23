@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>request</title>
+</head>
+<body>
+    <h1>Wether Information</h1>
+    <h3>今日の天気を知りたい場所を選択してください。</h3>
+    <form action="{% url 'request:detail' %}" method="post">
+        <select name="location" id="">
+            <option value="250010">大津</option>
+            <option value="250020">彦根</option>
+            <option value="260010">京都</option>
+            <option value="260020">舞鶴</option>
+            <option value="270000">大阪</option>
+            <option value="280010">神戸</option>
+            <option value="280020">豊岡</option>
+            <option value="290010">奈良</option>
+            <option value="290020">風屋</option>
+            <option value="300010">和歌山</option>
+            <option value="300020">潮岬</option>
+        </select>
+        <button type="submit">send</button>
+    </form>
+
+</body>
+</html>
